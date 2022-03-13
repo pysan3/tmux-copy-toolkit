@@ -22,7 +22,7 @@ logdir = None
 python_command = 'python3'
 # Find full path to tmux command so it can be invoked without a shell
 def find_command_path(c):
-	cmd = 'command -V ' + c
+	cmd = 'LANG=en_US.utf8 command -V ' + c
 	f = os.popen(cmd)
 	result = f.read()
 	estatus = f.close()
